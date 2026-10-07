@@ -1,0 +1,54 @@
+#lista "numbers"
+numbers = []
+
+# 5 liczb i dodanie do listy
+for i in range(5):
+    number = float(input("Podaj liczbę: "))
+    numbers.append(number)
+
+# Oblicz sumę liczb znajdujących się w liście "numbers"
+suma = sum(numbers)
+print("Suma:", suma)
+
+# Największa liczba w liście
+najwieksza = max(numbers)
+print("Najwieksza liczba:", najwieksza)
+
+# Najmniejsza liczba w liście
+najmniejsza = min(numbers)
+print("Najmniejsza liczba:", najmniejsza)
+
+# Średnia arytmetyczna liczb
+srednia = sum(numbers) / len(numbers)
+print("Srednia arytmetyczna:", srednia)
+
+# Ilość liczb parzystych w liście
+ilosc_parzystych = 0
+
+for number in numbers:
+    if number % 2 == 0:
+        ilosc_parzystych += 1
+
+print("Ilosc liczb parzystych:", ilosc_parzystych)
+
+# Stwórz listę "duplicates" zawierającą powtarzające się elementy
+duplicates = []
+
+for number in numbers:
+    if numbers.count(number) > 1 and number not in duplicates:
+        duplicates.append(number)
+
+print("Powtarzające się elementy:", duplicates)
+
+# Usuń wszystkie powtarzające się elementy z listy "numbers"
+numbers = list(dict.fromkeys(numbers))
+
+print("Lista bez powtórzeń:", numbers)
+
+# Stwórz listę "squares" zawierającą kwadraty liczb z listy "numbers"
+squares = []
+
+for number in numbers:
+    squares.append(number ** 2)
+
+print("Kwadraty:", squares)
